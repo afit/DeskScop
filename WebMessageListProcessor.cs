@@ -5,6 +5,7 @@ using System.Data;
 using System.Collections;
 using System.IO;
 using System.Configuration;
+using System.Web;
 
 using LothianProductions.Util.Http;
 
@@ -66,6 +67,8 @@ namespace LothianProductions.DeskScop.SpamCop {
 
 					String from = lines[ i + 5 ].Substring( 0, lines[ i + 5 ].IndexOf( ' ' ) );
 					String subject = lines[ i + 5 ].Substring( lines[ i + 5 ].IndexOf( "<strong>" ) + "<strong>".Length ).Trim();
+					// No need to strip out newlines, as they're actually in there...
+					// .Replace( "\n", "" ).Replace( "\r", "" );
 
 					int lastHeld = lines[ i + 8 ].LastIndexOf( ")" );
 					int firstHeld = lines[ i + 8 ].Substring( 0, lastHeld ).LastIndexOf( "(" );
@@ -122,7 +125,7 @@ namespace LothianProductions.DeskScop.SpamCop {
 
 				foreach( Message message in messages ) {
 					// Build POST string from messages to act upon.
-					mesglist += "&ids=" + message.Id + "&msgid" + message.Id + "=" + message.Checksum + "&checked=" + message.Id;
+					mesglist += "&ids=" + message.Id + "&msgid" + message.Id + "=" + HttpUtility.UrlEncode( message.Checksum ) + "&checked=" + message.Id;
 
 					// Remove processed messages.
 					list.Remove( message );
@@ -130,6 +133,7 @@ namespace LothianProductions.DeskScop.SpamCop {
 
 				// FIXME potential bug with POST request too long?
 				String post = "subaction=" + actions[ i ] + "&action=logaction" + mesglist;
+				System.Console.WriteLine( post );
 
 				try {
 					using( StreamWriter writer = File.CreateText( "DeskScop_log_" + DateTime.Now.Ticks + ".html" ) ) {
