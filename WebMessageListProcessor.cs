@@ -46,7 +46,9 @@ namespace LothianProductions.DeskScop.SpamCop {
 					// Username
 					DeskScop.Instance().UiConfiguration.Username,
 					// Password
-					DeskScop.Instance().UiConfiguration.Password
+					DeskScop.Instance().UiConfiguration.Password,
+					30000
+		            // FIXME(int) new TimeSpan( 0, 0, Convert.ToInt16( ConfigurationManager.AppSettings[ "httpActionTimeout" ] ) ).TotalMilliseconds;
 				);
 			} catch (System.Net.WebException e) {
 				throw new MessageListProcessorException( "Failed to read message list.", e );
@@ -63,7 +65,7 @@ namespace LothianProductions.DeskScop.SpamCop {
 					String checksum = split[ 1 ];
 
 					String sid =  lines[ i + 4 ].Substring( "<strong>[".Length, lines[ i + 4 ].Length - "<strong>[".Length - "]</strong>".Length );
-					int id = Convert.ToInt16( sid );
+					int id = Convert.ToInt32( sid );
 
 					String from = lines[ i + 5 ].Substring( 0, lines[ i + 5 ].IndexOf( ' ' ) );
 					String subject = lines[ i + 5 ].Substring( lines[ i + 5 ].IndexOf( "<strong>" ) + "<strong>".Length ).Trim();
