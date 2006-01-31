@@ -63,9 +63,9 @@ namespace LothianProductions.DeskScop.Forms {
 			lnkStrap.Links.Add( 6, 20, "www.lothianproductions.co.uk" );
 			lnkStrap.Links.Add( 49, 14, "www.lothianproductions.co.uk/deskscop" );
 
-			txtUri.Text = ConfigurationSettings.AppSettings[ "defaultUri" ];
-			txtUsername.Text = ConfigurationSettings.AppSettings[ "defaultUsername" ];
-			txtPassword.Text = ConfigurationSettings.AppSettings[ "defaultPassword" ];
+			txtUri.Text = ConfigurationManager.AppSettings[ "defaultUri" ];
+			txtUsername.Text = ConfigurationManager.AppSettings[ "defaultUsername" ];
+			txtPassword.Text = ConfigurationManager.AppSettings[ "defaultPassword" ];
 
 			DataGridTableStyle tableStyle = new DataGridTableStyle();
 			tableStyle.MappingName = "HeldMessages";
@@ -73,32 +73,32 @@ namespace LothianProductions.DeskScop.Forms {
 
 			DataGridTextBoxColumn columnStyle = new DataGridRowColourColumn();
 			columnStyle.MappingName = "Action";
-			columnStyle.Width = Convert.ToInt16( ConfigurationSettings.AppSettings[ "columnActionWidth" ] );
+			columnStyle.Width = Convert.ToInt16( ConfigurationManager.AppSettings[ "columnActionWidth" ] );
 			tableStyle.GridColumnStyles.Add( columnStyle );
 
 			columnStyle = new DataGridRowColourColumn();
 			columnStyle.MappingName = "From";
 			columnStyle.HeaderText = "From";
-			columnStyle.Width = Convert.ToInt16( ConfigurationSettings.AppSettings[ "columnFromWidth" ] );
+			columnStyle.Width = Convert.ToInt16( ConfigurationManager.AppSettings[ "columnFromWidth" ] );
 			tableStyle.GridColumnStyles.Add( columnStyle );
 
 			columnStyle = new DataGridRowColourColumn();
 			columnStyle.MappingName = "Subject";
 			columnStyle.HeaderText = "Subject";
-			columnStyle.Width = Convert.ToInt16( ConfigurationSettings.AppSettings[ "columnSubjectWidth" ] );
+			columnStyle.Width = Convert.ToInt16( ConfigurationManager.AppSettings[ "columnSubjectWidth" ] );
 			tableStyle.GridColumnStyles.Add( columnStyle );
 
 			columnStyle = new DataGridRowColourColumn();
 			columnStyle.MappingName = "Sent";
 			columnStyle.HeaderText = "Sent";
 			columnStyle.Format = "f";
-			columnStyle.Width = Convert.ToInt16( ConfigurationSettings.AppSettings[ "columnSentWidth" ] );
+			columnStyle.Width = Convert.ToInt16( ConfigurationManager.AppSettings[ "columnSentWidth" ] );
 			tableStyle.GridColumnStyles.Add( columnStyle );
 
 			columnStyle = new DataGridRowColourColumn();
 			columnStyle.MappingName = "Why Held";
 			columnStyle.HeaderText = "Why Held";
-			columnStyle.Width = Convert.ToInt16( ConfigurationSettings.AppSettings[ "columnWhyHeldWidth" ] );
+			columnStyle.Width = Convert.ToInt16( ConfigurationManager.AppSettings[ "columnWhyHeldWidth" ] );
 			tableStyle.GridColumnStyles.Add( columnStyle );
 
 			dgdMessages.TableStyles.Add( tableStyle );

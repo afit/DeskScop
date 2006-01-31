@@ -47,19 +47,19 @@ namespace LothianProductions.DeskScop {
 
 		/// <exception cref="System.Configuration.ConfigurationException">Thrown when application configuration is absent.</exception>
 		protected DeskScop() {
-			if( ConfigurationSettings.AppSettings.Count == 0 ) {
+			if( ConfigurationManager.AppSettings.Count == 0 ) {
 				MessageBox.Show(
 					"DeskScop couldn't start as it is missing its configuration file. Check that the DeskScop.exe.config file is in the same folder as the DeskScop executable.",
 					"DeskScop is misconfigured",
 					MessageBoxButtons.OK,
 					MessageBoxIcon.Error
 				);
-				throw new ConfigurationException( "Couldn't find configuration." );
+				throw new ConfigurationErrorsException( "Couldn't find configuration." );
 			}
 
 			// Get empty constructor for message list processor class.
 			mProcessor = (MessageListProcessor) Activator.CreateInstance(
-				null, ConfigurationSettings.AppSettings[ "messageListProcessor" ]
+				null, ConfigurationManager.AppSettings[ "messageListProcessor" ]
 			).Unwrap();
 		}
 

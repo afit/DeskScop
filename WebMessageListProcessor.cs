@@ -47,8 +47,7 @@ namespace LothianProductions.DeskScop.SpamCop {
 					DeskScop.Instance().UiConfiguration.Username,
 					// Password
 					DeskScop.Instance().UiConfiguration.Password,
-					30000
-		            // FIXME(int) new TimeSpan( 0, 0, Convert.ToInt16( ConfigurationManager.AppSettings[ "httpActionTimeout" ] ) ).TotalMilliseconds;
+		            (int) new TimeSpan( 0, 0, Convert.ToInt16( ConfigurationManager.AppSettings[ "httpActionTimeout" ] ) ).TotalMilliseconds
 				);
 			} catch (System.Net.WebException e) {
 				throw new MessageListProcessorException( "Failed to read message list.", e );
@@ -82,7 +81,7 @@ namespace LothianProductions.DeskScop.SpamCop {
 					DateTime sent;
 
 					try {
-						sent = DateTime.ParseExact( date, ConfigurationSettings.AppSettings[ "datePatterns" ].Split( '|' ), DateTimeFormatInfo.CurrentInfo, DateTimeStyles.None );
+						sent = DateTime.ParseExact( date, ConfigurationManager.AppSettings[ "datePatterns" ].Split( '|' ), DateTimeFormatInfo.CurrentInfo, DateTimeStyles.None );
 					} catch (FormatException) {
 						// Recover from error by resetting date.
 						sent = new DateTime( 1970, 1, 1, 0, 0, 0 );
