@@ -2,7 +2,7 @@ What is DeskScop?
 -----------------
 DeskScop is a desktop application that can make SpamCop far quicker and easier to work with. It provides a sortable view on your held messages, and will allow for additional user-configurable rules to be applied to the held mail.
 
-If you find you often have many held messages to check through DeskScop can help you process your messages faster, as it is able to perform several different actions ( *quick report* , *forward* , *forward\&whitelist* , *queue* , *queue\&trash*  and *delete* ) on your held mail without having to reread the list through SpamCop's often-slow interface.
+If you find you often have many held messages to check through DeskScop can help you process your messages faster, as it is able to perform several different actions ( *quick report*, *forward*, *forward \& whitelist*, *queue*, *queue \& trash* and *delete*) on your held mail without having to reread the list through SpamCop's often-slow interface.
 
 It is available at no cost and is a small download.
 
@@ -32,20 +32,22 @@ Where can I get DeskScop?
 -------------------------
 Please do not redistribute DeskScop without our permission. You can download DeskScop here:
 
-*  `DeskScop 0.9.2 Beta </res/labs/DeskScop-0.9.2.zip>`_ 
-* (31st January 2006)
+*  `DeskScop 0.9.2 Beta <http://www.reincubate.com/res/labs/DeskScop-0.9.2.zip>`_ (31st January 2006)
 *  `GitHub <https://github.com/afit/DeskScop>`_ 
 
 Change log
 ----------
 0.9.2
+
 * Fixed bug parsing higher-order message IDs
 * Ported to .NET 2
 
 0.9.1
+
 * Support for entitised message IDs
 
 0.9
+
 * Improved support for corrupted email headers
 * Added handy \"Next \>\" button
 * Removed messagebox warning when DeskScop can't parse a date. Unparsable dates are set to 1970.
@@ -53,10 +55,12 @@ Change log
 * Fixed status bar behaviour when no messages found.
 
 0.8.2
+
 * Fixed bug with action lookups
 * Moved column width settings to configuration file
 
 0.8.1
+
 * Specific error message for incorrect username / password
 * Date parsing patterns broken out to config
 * User prompted to update date parsing patterns
@@ -64,6 +68,7 @@ Change log
 * Added status bar with some information
 
 0.8
+
 * First public alpha release of DeskScop
 
 Help! It doesn't work!
