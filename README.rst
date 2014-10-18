@@ -32,7 +32,7 @@ Where can I get DeskScop?
 -------------------------
 Please do not redistribute DeskScop without our permission. You can download DeskScop here:
 
-*  `DeskScop 0.9.2 Beta <http://www.reincubate.com/res/labs/DeskScop-0.9.2.zip>`_ (31st January 2006)
+*  `DeskScop 0.9.2 Beta <https://github.com/afit/DeskScop/raw/master/Release/0.9.2/DeskScop-0.9.2.zip>`_ (31st January 2006)
 *  `GitHub <https://github.com/afit/DeskScop>`_ 
 
 Change log
@@ -76,4 +76,4 @@ Help! It doesn't work!
 There isn't much useful documentation yet.
 
 * When I run DeskScop I get an \"Application Error\" message! Installing the `Microsoft .NET Framework Version 1.1 Redistributable Package <http://www.microsoft.com/downloads/details.aspx?FamilyID=262d25e3-f589-4842-8157-034d1e7cf3a3&DisplayLang=en>`_ should fix this.
-* I get an error message \"An error occured parsing the sent date[...]\"! DeskScop tries to parse sent dates in your held mail into a common readable date format. However, the dates in spam email headers are not commonly well-formed. The DeskScop.exe.config configuration file lists a series of patterns. Have a poke around with it, or email the authors with the invalid date in question.
+* I get an error message \"An error occured parsing the sent date[...]\"! DeskScop tries to parse sent dates in your held mail into a common readable date format. However, the dates in spam email headers are not commonly well-formed. The DeskScop.exe.config configuration file lists a series of patterns. Have a poke around with it, or raise an issue in GitHub.
