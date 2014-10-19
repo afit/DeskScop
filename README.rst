@@ -5,7 +5,7 @@ What is DeskScop?
 -----------------
 DeskScop is a desktop application that can make SpamCop far quicker and easier to work with. It provides a sortable view on your held messages, and will allow for additional user-configurable rules to be applied to the held mail.
 
-If you find you often have many held messages to check through DeskScop can help you process your messages faster, as it is able to perform several different actions ( *quick report*, *forward*, *forward \& whitelist*, *queue*, *queue \& trash* and *delete*) on your held mail without having to reread the list through SpamCop's often-slow interface.
+If you find you often have many held messages to check through DeskScop can help you process your messages faster, as it is able to perform several different actions (*quick report*, *forward*, *forward \& whitelist*, *queue*, *queue \& trash* and *delete*) on your held mail without having to reread the list through SpamCop's often-slow interface.
 
 It is available at no cost and is a small download.
 
