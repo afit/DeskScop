@@ -8,11 +8,11 @@ It is available at no cost and is a small download.
 
 What does DeskScop look like?
 -----------------------------
-.. image:: http://s.reincubate.com/res/i/labs/deskscop_configuration.gif
+.. image:: https://github.com/afit/DeskScop/raw/master/Release/deskscop_configuration.gif
    :alt: DeskScop's configuration screen.
 
 
-.. image:: http://s.reincubate.com/res/i/labs/deskscop_action.gif
+.. image:: https://github.com/afit/DeskScop/raw/master/Release/deskscop_action.gif
    :alt: DeskScop's action screen.
    :width: 595px
 
